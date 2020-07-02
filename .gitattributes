@@ -1,0 +1,7 @@
+data/layer_1/funded_address_settlement_txs.json filter=lfs diff=lfs merge=lfs -text
+data/layer_1/funding_txs.json filter=lfs diff=lfs merge=lfs -text
+data/layer_1/settlement_addresses.json filter=lfs diff=lfs merge=lfs -text
+data/layer_2/*.json filter=lfs diff=lfs merge=lfs -text
+data/layer_2/channel.csv filter=lfs diff=lfs merge=lfs -text
+data/layer_2/ip_address.csv filter=lfs diff=lfs merge=lfs -text
+data/layer_2/node.csv filter=lfs diff=lfs merge=lfs -text
