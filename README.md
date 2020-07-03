@@ -1,5 +1,6 @@
-# [Work in progress] Cross-Layer Deanonymization Methods in the Lightning Protocol
+# Cross-Layer Deanonymization Methods in the Lightning Protocol
 
+## [Work in progress]
 This repository is going to host the relevant code and the data to reproduce 
 the results of the research paper.
 
