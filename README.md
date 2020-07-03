@@ -2,7 +2,7 @@
 
 ## [Work in progress]
 This repository is going to host the relevant code and the data to reproduce 
-the results of the research paper.
+the results of the [research paper][arxiv].
 
 ## Abstract
 
@@ -89,6 +89,7 @@ Map funding and settlement addresses to funding and settlement entities by query
 - last block height (for computing multi-input clustering): 618857
 
 
+[arxiv]: https://arxiv.org/abs/2007.00764
 [git lfs]: https://git-lfs.github.com/
 [LND]: https://github.com/lightningnetwork/lnd
 [GS API]: https://api.graphsense.info/
