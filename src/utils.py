@@ -2,11 +2,11 @@ import json
 import requests
 from api_calls import get_address_entityID
 
-level1_folder = '../data/joined/level_1/'
-level2_folder = '../data/joined/level_2/'
-results_folder = '../data/joined/results/'
+level1_folder = '../data/layer_1/'
+level2_folder = '../data/layer_2/'
+results_folder = '../data/results/'
 
-on_chain_heuristics_list = ['none', 'stars', 'snakes', 'collectors', 'all']
+on_chain_heuristics_list = ['none', 'stars', 'snakes', 'proxies', 'all']
 
 
 def read_json(path, int_key=False, double_int_key=False):

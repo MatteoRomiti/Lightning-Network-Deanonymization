@@ -5,10 +5,10 @@ from utils import write_json
 from api_calls import get_tx
 import pandas as pd
 
-input_dir = '../data/joined/level_2/'
+input_dir = '../data/layer_2/'
 input_file = input_dir + 'channel.csv'
 
-output_dir = '../data/joined/level_1/'
+output_dir = '../data/layer_1/'
 output_file = output_dir + 'funding_txs.json'
 
 channels = pd.read_csv(input_file)

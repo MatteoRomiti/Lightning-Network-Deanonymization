@@ -1,14 +1,13 @@
-# This script fetches the entity IDs of funding addresses
-# from the GraphSense API (access token needed)
-# starting from a list funding txs.
+# This script fetches the entity IDs of funding addresses from the GraphSense
+# API (access token needed) starting from a list of funding txs.
 
 from utils import read_json, write_json, fill_address_entity
 
-input_dir = '../data/joined/level_1/'
+input_dir = '../data/layer_1/'
 input_file = input_dir + 'funding_txs.json'
 
-output_dir = '../data/joined/level_1/'
-output_file = output_dir + 'funding_address_entity_test.json'
+output_dir = '../data/layer_1/'
+output_file = output_dir + 'funding_address_entity.json'
 
 funding_txs = read_json(input_file)
 

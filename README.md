@@ -53,7 +53,7 @@ in `data/layer_2`.
 
 Use the channel points in `channel.csv` to get the details of the funding 
 transactions by querying the [GraphSense API][GS API] and store the 
-results in `data/layer_1/funding_txs.json`
+results in `data/layer_1/funding_txs.json`:
 
     python3 get_funding_txs.py
 
@@ -61,28 +61,65 @@ Use the funding transactions and the channel points to get the details of the
  settlement transactions and the settlement addresses by querying the 
  [GraphSense API][GS API] and store the results in 
  `data/layer_1/funded_address_settlement_txs.json` and 
- `data/layer_1/settlement_addresses.json`
+ `data/layer_1/settlement_addresses.json`:
 
     python3 get_funded_address_settlement_txs.py
 
 #### Get mapping of funding and settlement address to entities
 
-Map funding and settlement addresses to funding and settlement entities by querying the 
-[GraphSense API][GS API] and store the results in 
+Map funding and settlement addresses to funding and settlement entities by 
+querying the [GraphSense API][GS API] and store the results in 
 `data/layer_1/funding_address_entity.json` and 
-`data/layer_1/settlement_address_entity.json`
+`data/layer_1/settlement_address_entity.json`:
 
     python3 get_funding_address_entity.json
     python3 get_settlement_address_entity.json
 
 #### Perform on-chain clustering heuristics
 
+Use the funding and settlement entities to retrieve source and destination 
+entities by querying the [GraphSense API][GS API]:
+
+    ...
+
+Cluster source, funding, settlement and destination entities into components 
+(star, snake, collector and proxy).
+
+    ...
+
 #### Perform off-chain clustering heuristics
+
+Use aliases and IP addresses to cluster nodes:
+
+    ...
 
 #### Perform cross-layer linking heuristics
 
+Retrieve from the [Blockstream API][BS API] the funding transactions that use 
+coins from settlement transactions:
+
+    python3 get_reused_coins_txs.py
+
+Sort stars, snakes and proxies and assign them unique IDs:
+
+    python3 sort_mapping_entities.py
+    
+Use all previous results to link Bitcoin entities to LN nodes. Two linking 
+heuristics are available. Including on-chain clustering heuristics 
+improves the linking results available in 
+`data/results/filtered_heuristic_2_results.json` and 
+`data/results/filtered_heuristic_2_results.json`:
+
+    python3 LN_BTC_heuristic_1.py
+    python3 LN_BTC_heuristic_2.py
+
 #### Perform attacks on the LN
 
+Use the results of the LN node clustering heuristic to evaluate the security 
+and privacy of the LN:
+
+    ...
+    
 ---
 
 ### Notes
@@ -93,3 +130,4 @@ Map funding and settlement addresses to funding and settlement entities by query
 [git lfs]: https://git-lfs.github.com/
 [LND]: https://github.com/lightningnetwork/lnd
 [GS API]: https://api.graphsense.info/
+[BS API]: https://github.com/Blockstream/esplora/blob/master/API.md
