@@ -39,3 +39,5 @@ data/results/settlement_cluster_collector_pattern_extended.csv filter=lfs diff=l
 data/results/settlement_cluster_collector_pattern_extended_filtered.csv filter=lfs diff=lfs merge=lfs -text
 data/results/funding_cluster_snake_pattern_filtered.csv filter=lfs diff=lfs merge=lfs -text
 data/results/funding_cluster_star_pattern_filtered.csv filter=lfs diff=lfs merge=lfs -text
+data/results/alias_address_clusters.csv filter=lfs diff=lfs merge=lfs -text
+data/results/funding_entity_channels_nodes.json filter=lfs diff=lfs merge=lfs -text

@@ -24,16 +24,21 @@ input_file_15 = results_folder + 'collector_sorted_mapping.json'
 input_file_15b = results_folder + 'proxy_sorted_mapping.json'
 
 
-def df_to_dicts_set(df):
+def df_to_dicts_set(df, invert=False):
     node_x = dict()
     x_node = dict()
     for el in df.values:
-        if el[0] not in node_x:
-            node_x[el[0]] = set()
-        node_x[el[0]].add(el[1])
-        if el[1] not in x_node:
-            x_node[el[1]] = set()
-        x_node[el[1]].add(el[0])
+        el0 = el[0]
+        el1 = el[1]
+        if invert:
+            el0 = el[1]
+            el1 = el[0]
+        if el0 not in node_x:
+            node_x[el0] = set()
+        node_x[el0].add(el1)
+        if el1 not in x_node:
+            x_node[el1] = set()
+        x_node[el1].add(el0)
     return node_x, x_node
 
 

@@ -122,6 +122,20 @@ When `filtered_` is prepended to the file name, it means that, to the best of
 our knowledge, no exchanges or similar services are in the dataset (please, 
 refer to the paper for further details).
 
+Check the linking overlap between the two heuristics:
+    
+    python3 check_linking_overlap.py
+    
+Check how many "questionable" attributions are created by the second 
+heuristic by using on-chain activity time overlap of nodes:
+    
+    python3 check_time_overlap.py
+
+Use the off-chain clustering heuristic to see how many Bitcoin addresses can be
+attributed with an LN attribution tag:
+    
+    python3 linking_alias_overlap.py
+
 
 #### Perform attacks on the LN
 

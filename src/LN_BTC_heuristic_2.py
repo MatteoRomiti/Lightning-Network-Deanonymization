@@ -9,6 +9,7 @@ from load_data import channels, funding_txs, funding_address_entity, \
 from sort_mapping_entities import relaxed
 from collections import Counter
 
+output_file_0 = results_folder + 'funding_entity_channels_nodes.json'
 
 if relaxed:
     results_folder += 'relaxed_filtered_'
@@ -97,8 +98,7 @@ def heuristic_2(fae, sae, och):
                 node_possible_entities[channel[i]] = set()
             node_possible_entities[channel[i]].add(funding_entity)
 
-    write_json(funding_entity_channels_nodes, results_folder +
-               'funding_entity_channels_nodes.json')
+    write_json(funding_entity_channels_nodes, output_file_0)
 
     heuristic_2a_entity_node_conf = dict()
     for min_confidence_level in range(range_min_conf[0], range_min_conf[1]):
