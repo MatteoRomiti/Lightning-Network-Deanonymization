@@ -1,5 +1,5 @@
-# This script maps IDs of stars, snakes, proxies into
-# a sorted list of unique IDs
+# This script maps IDs of stars, snakes, proxies into a sorted list of unique
+# IDs.
 
 import pandas as pd
 from utils import write_json

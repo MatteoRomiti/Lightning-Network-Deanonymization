@@ -1,5 +1,5 @@
 # This script links BTC entities to LN nodes
-# with the reuse-entity heuristic
+# with the coin-reuse-entity heuristic
 
 from utils import read_json, write_json, level1_folder, results_folder, \
     most_common, link_other_nodes, invert_mapping, get_results, \

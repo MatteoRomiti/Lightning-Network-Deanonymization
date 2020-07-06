@@ -23,10 +23,10 @@ def url2dict(url):
 # Look at https://api.graphsense.info/ to see current API docs
 ##############################
 
+
 def get_label(label):
     url = api_path  + '/labelsearch?q=' + label
     return url2dict(url)
-
 
 
 def get_address_info(address, currency='btc'):

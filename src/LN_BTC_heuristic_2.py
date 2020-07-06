@@ -1,5 +1,5 @@
 # This script links BTC entities to LN nodes
-# with the funding-topology heuristic
+# with the funding-entity-reuse heuristic
 
 from utils import read_json, write_json, results_folder, invert_mapping, \
     link_other_nodes, get_results, on_chain_heuristics_list
