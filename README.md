@@ -104,14 +104,24 @@ Sort stars, snakes and proxies and assign them unique IDs:
 
     python3 sort_mapping_entities.py
     
-Use all previous results to link Bitcoin entities to LN nodes. Two linking 
-heuristics are available. Including on-chain clustering heuristics 
-improves the linking results available in 
-`data/results/filtered_heuristic_2_results.json` and 
-`data/results/filtered_heuristic_2_results.json`:
+Use results from on-chain clustering heuristics to link Bitcoin entities to LN 
+nodes. Two linking heuristics are available. 
 
     python3 LN_BTC_heuristic_1.py
     python3 LN_BTC_heuristic_2.py
+
+The results are stored in `data/results/`. In particular, 
+`filtered_heuristic_2_results.json` and `filtered_heuristic_2_results.json` 
+report absolute and relative numbers of linked entities and nodes, while 
+`*_entity_node.json` and `*_node_entity.json` contain the actual links (from 
+entity to node and vice versa). On-chain patterns used before the linking 
+heuristics are mentioned in the file name, e.g., 
+`star_heuristic_1_entity_node.json` contains the mapping from entity to node 
+using the star-pattern on top of the standard multi-input clustering heuristic.
+When `filtered_` is prepended to the file name, it means that, to the best of 
+our knowledge, no exchanges or similar services are in the dataset (please, 
+refer to the paper for further details).
+
 
 #### Perform attacks on the LN
 

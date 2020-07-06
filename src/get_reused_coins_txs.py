@@ -20,7 +20,7 @@ fes = set(funding_address_entity.values())
 ses = set(settlement_address_entity.values())
 overlap_entities = fes.intersection(ses)
 
-print('len overlap entities', len(overlap_entities))
+# print('len overlap entities', len(overlap_entities))
 
 useful_funding_txs = set()
 settlement_entities = settlement_address_entity.values()
@@ -31,7 +31,7 @@ for ftx in funding_txs.values():
             useful_funding_txs.add(ftx['tx_hash'])
             break
 
-print('len useful_funding_txs', len(useful_funding_txs))
+# print('len useful_funding_txs', len(useful_funding_txs))
 
 blockstream_funding_txs = dict()
 for i, ftx in enumerate(useful_funding_txs):

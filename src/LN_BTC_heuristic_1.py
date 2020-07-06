@@ -303,9 +303,6 @@ for och in on_chain_heuristics:
         results[och] = heuristic_1(funding_address_entity, settlement_address_entity, on_chain_heuristics)
         on_chain_heuristics[och] = False
 
-# on_chain_heuristics = {och: (True if och in ['snakes', 'collectors'] else False) for och in on_chain_heuristics_list}
-# results['snakes_collectors'] = heuristic_1(funding_address_entity, settlement_address_entity, on_chain_heuristics)
-
 # all
 on_chain_heuristics = {och: (True if och != 'none' else False) for och in on_chain_heuristics_list}
 results['all'] = heuristic_1(funding_address_entity, settlement_address_entity, on_chain_heuristics)
