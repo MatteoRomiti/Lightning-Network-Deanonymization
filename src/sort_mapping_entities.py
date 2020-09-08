@@ -46,7 +46,7 @@ def df_to_two_dicts(components_df):
 
 entity_snake, snake_entities = df_to_two_dicts(snakes_df)
 entity_star, star_entities = df_to_two_dicts(stars_df)
-# entity_collector, collector_entity = df_to_two_dicts(collector_df)
+# entity_collector, collector_entity = df_to_two_dicts(collectors_df)
 entity_proxy, proxy_entities = df_to_two_dicts(proxies_df)
 
 

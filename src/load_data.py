@@ -142,8 +142,8 @@ funding_address_entity = read_json(input_file_5)
 funded_address_settlement_txs = read_json(input_file_6)
 settlement_address_entity = read_json(input_file_7)
 settlement_addresses = read_json(input_file_8)
-settlement_txs_full = read_json(input_file_9)
-settlement_txs_hashes = [el['tx_hash'] for el in settlement_txs_full]
+settlement_txs_list = read_json(input_file_9)
+settlement_txs_hashes = [el['tx_hash'] for el in settlement_txs_list]
 
 # Nodes on-chain activity
 # for each node, create a list of timestamps of
